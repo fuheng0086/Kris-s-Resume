@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kris ｜ 何忠达 — 高级个人简历</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #1d1d1f;
+      line-height: 1.75;
+    }
+    .container {
+      max-width: 960px;
+      margin: 60px auto;
+      padding: 60px 48px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.07);
+    }
+    h1 { font-size: 36px; font-weight: 700; margin-bottom: 0.3em; }
+    h2 {
+      font-size: 20px; font-weight: 600; color: #0071e3;
+      margin-top: 48px; display: flex; align-items: center;
+    }
+    h2 i { margin-right: 10px; color: #0071e3; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 24px; }
+    .lang-switch { text-align: right; margin-bottom: 30px; }
+    .lang-switch button {
+      background: #dce1e7; border: none; padding: 6px 14px; border-radius: 8px;
+      margin-left: 10px; font-weight: 500; cursor: pointer;
+    }
+    .info-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px 36px; margin-bottom: 40px;
+    }
+    .info-grid i { margin-right: 6px; color: #0071e3; }
+    .info-grid p { margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="text-align:right; margin-bottom:10px;">
+      <button onclick="window.print()" style="background:#0071e3;color:white;padding:6px 14px;border:none;border-radius:6px;cursor:pointer;font-weight:500;">
+        <i class="fa-solid fa-file-arrow-down"></i> 导出 PDF
+      </button>
+    </div>
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+    <h1 id="name">Kris ｜ 何忠达</h1>
+    <h2><i class='fa-solid fa-circle-user'></i> Professional Summary</h2>
+    <p id="summary">具备工商与旅游管理双背景的人才管理顾问，擅长优化招聘流程、带领跨部门团队协作，并通过 ChatGPT 和 CRM 工具推动客户体验优化。中英文双语流利，具有出色的领导力、数据分析与沟通表达能力。</p>
+    <div class="info-grid">
+      <p><i class="fa-solid fa-cake-candles"></i><strong id="label-birth">出生年月：</strong> <span id="birth">1996年08月</span></p>
+      <p><i class="fa-solid fa-graduation-cap"></i><strong id="label-uni">毕业院校：</strong> <span id="university">贵州大学</span></p>
+      <p><i class="fa-solid fa-language"></i><strong id="label-lang">语言能力：</strong> <span id="language">中文六级，TOEIC 8级</span></p>
+      <p><i class="fa-solid fa-phone"></i><strong id="label-phone">联系方式：</strong> <span id="phone">0865398693</span></p>
+    </div>
+    <h2><i class="fa-solid fa-book"></i><span id="edu-title">教育背景</span></h2>
+    <div class="section">
+      <p id="edu">2014年9月 – 2019年6月 · 贵州大学 · 工商管理与旅游管理双专业方向。主修课程包括：人力资源管理、绩效评估、团队领导力、项目管理与风险控制。</p>
+    </div>
+    <h2><i class="fa-solid fa-briefcase"></i><span id="exp-title">工作经历</span></h2>
+    <div class="section" id="exp">
+      <p><strong>2019年6月 – 2021年5月</strong> · BGC科技公司 · 客户体验运营负责人</p>
+      <ul>
+        <li>处理客户咨询与售后问题，维护良好客户关系；</li>
+        <li>管理客服系统数据，协助销售团队提升绩效；</li>
+        <li>负责新员工培训，持续优化服务流程与质量。</li>
+      </ul>
+      <p><strong>2021年7月 – 2024年12月</strong> · DA集团 · 人力资源管理顾问</p>
+      <ul>
+        <li>带领10人以上招聘团队，团队成绩长期保持集团前三；</li>
+        <li>主导招聘流程的制定与优化，提高整体效率与候选人匹配度；</li>
+        <li>参与面试与评估，注重文化契合度；</li>
+        <li>培训与指导新人成长，提升团队整体专业素养。</li>
+      </ul>
+    </div>
+    <h2><i class="fa-solid fa-user-check"></i><span id="eval-title">自我评价</span></h2>
+    <p id="self">熟练使用 ChatGPT 及各类办公软件，具备较强的进取心与创造力。沟通协调能力出色，擅长组织管理，注重执行力与细节，能高效推动团队完成任务。</p>
+    <h2><i class="fa-solid fa-heart"></i> 兴趣与热情</h2>
+    <div class="section">
+      <p>我始终保持对新知与技术的强烈好奇，热衷于在快速变化的科技浪潮中不断提升自己：</p>
+      <ul>
+        <li><strong>技术探索：</strong> 喜欢深入研究系统架构与网络基础，正在备考 CCNA 网络工程师认证。</li>
+        <li><strong>学习成长：</strong> 热爱编程与工具类应用，持续精进解决问题的能力。</li>
+        <li><strong>行业关注：</strong> 紧跟 Apple、AI、国产科技等生态动态，善于从中提取趋势洞察。</li>
+        <li><strong>身体管理：</strong> 坚持健身训练，相信身体与专注力是专业表现的底层保障。</li>
+      </ul>
+    </div>
+    <h2><i class="fa-solid fa-quote-left"></i> 人生箴言</h2>
+    <p>没有最好的年纪，只有最好的状态。</p>
+    <h2><i class="fa-solid fa-bullseye"></i> 人生目标</h2>
+    <p>雷军 40 岁创办小米，让我深信任何年龄都可以开启新篇章。重新投身 IT 与科技领域，是我给自己的时代回应：不止于转型，更是重构人生价值坐标。</p>
+  </div>
+
+  <script>
+  const langContent = {
+    zh: {
+      summary: "具备工商与旅游管理双背景的人才管理顾问，擅长优化招聘流程、带领跨部门团队协作，并通过 ChatGPT 和 CRM 工具推动客户体验优化。中英文双语流利，具有出色的领导力、数据分析与沟通表达能力。",
+      labelBirth: "出生年月：",
+      labelUni: "毕业院校：",
+      labelLang: "语言能力：",
+      labelPhone: "联系方式：",
+      eduTitle: "教育背景",
+      edu: "2014年9月 – 2019年6月 · 贵州大学 · 工商管理与旅游管理双专业方向。主修课程包括：人力资源管理、绩效评估、团队领导力、项目管理与风险控制。",
+      expTitle: "工作经历",
+      exp: `<p><strong>2019年6月 – 2021年5月</strong> · BGC科技公司 · 客户体验运营负责人</p>
+        <ul>
+          <li>处理客户咨询与售后问题，维护良好客户关系；</li>
+          <li>管理客服系统数据，协助销售团队提升绩效；</li>
+          <li>负责新员工培训，持续优化服务流程与质量。</li>
+        </ul>
+        <p><strong>2021年7月 – 2024年12月</strong> · DA集团 · 人力资源管理顾问</p>
+        <ul>
+          <li>带领10人以上招聘团队，团队成绩长期保持集团前三；</li>
+          <li>主导招聘流程的制定与优化，提高整体效率与候选人匹配度；</li>
+          <li>参与面试与评估，注重文化契合度；</li>
+          <li>培训与指导新人成长，提升团队整体专业素养。</li>
+        </ul>`,
+      evalTitle: "自我评价",
+      self: "熟练使用 ChatGPT 及各类办公软件，具备较强的进取心与创造力。沟通协调能力出色，擅长组织管理，注重执行力与细节，能高效推动团队完成任务。"
+    },
+    en: {
+      summary: "Human capital consultant with dual degrees in Business and Tourism Management. Skilled in streamlining recruitment processes, leading cross-functional collaboration, and driving customer experience enhancement via ChatGPT and CRM platforms. Bilingual in Mandarin and English with strong leadership, analytical, and interpersonal skills.",
+      labelBirth: "Date of Birth:",
+      labelUni: "University:",
+      labelLang: "Languages:",
+      labelPhone: "Phone:",
+      eduTitle: "Education",
+      edu: "Sept 2014 – Jun 2019 · Guizhou University · Dual major in Business and Tourism Management. Core curriculum: HR Management, Performance Evaluation, Team Leadership, Project & Risk Management.",
+      expTitle: "Professional Experience",
+      exp: `<p><strong>Jun 2019 – May 2021</strong> · BGC Technology · Customer Experience Operations Lead</p>
+        <ul>
+          <li>Handled customer inquiries and post-sale issues, ensuring excellent client relationships.</li>
+          <li>Managed service systems, collaborated with sales to boost performance.</li>
+          <li>Led training initiatives and optimized support workflows.</li>
+        </ul>
+        <p><strong>Jul 2021 – Dec 2024</strong> · DA Group · Human Resources Consultant</p>
+        <ul>
+          <li>Led a 10+ member recruitment team, consistently top-ranked in the group.</li>
+          <li>Designed and enhanced hiring processes to increase efficiency and fit.</li>
+          <li>Conducted interviews focusing on culture match and potential.</li>
+          <li>Mentored junior staff and built a high-performing HR team.</li>
+        </ul>`,
+      evalTitle: "Self Evaluation",
+      self: "Proficient in ChatGPT and productivity tools. Highly driven and creative with strong coordination and leadership abilities. Detail-oriented and execution-focused, enabling effective team success."
+    }
+  };
+
+  function setLang(lang) {
+    const t = langContent[lang];
+    document.getElementById("summary").textContent = t.summary;
+    document.getElementById("label-birth").textContent = t.labelBirth;
+    document.getElementById("label-uni").textContent = t.labelUni;
+    document.getElementById("label-lang").textContent = t.labelLang;
+    document.getElementById("label-phone").textContent = t.labelPhone;
+    document.getElementById("edu-title").textContent = t.eduTitle;
+    document.getElementById("edu").textContent = t.edu;
+    document.getElementById("exp-title").textContent = t.expTitle;
+    document.getElementById("exp").innerHTML = t.exp;
+    document.getElementById("eval-title").textContent = t.evalTitle;
+    document.getElementById("self").textContent = t.self;
+  }
+</script>
+</body>
+</html>
