@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kris ｜ 何忠达 — 高级个人简历</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f4f6f8;
       color: #1d1d1f;
       line-height: 1.75;
@@ -24,10 +24,7 @@
       box-shadow: 0 24px 48px rgba(0, 0, 0, 0.07);
     }
     h1 { font-size: 36px; font-weight: 700; margin-bottom: 0.3em; }
-    h2 {
-      font-size: 20px; font-weight: 600; color: #0071e3;
-      margin-top: 48px; display: flex; align-items: center;
-    }
+    h2 { font-size: 20px; font-weight: 600; color: #0071e3; margin-top: 48px; display: flex; align-items: center; }
     h2 i { margin-right: 10px; color: #0071e3; }
     p, li { font-size: 16px; }
     ul { padding-left: 24px; }
@@ -54,122 +51,160 @@
     <div class="lang-switch">
       <button onclick="setLang('zh')">中文</button>
       <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('vi')">Tiếng Việt</button>
     </div>
     <h1 id="name">Kris ｜ 何忠达</h1>
-    <h2><i class='fa-solid fa-circle-user'></i> Professional Summary</h2>
-    <p id="summary">具备工商与旅游管理双背景的人才管理顾问，擅长优化招聘流程、带领跨部门团队协作，并通过 ChatGPT 和 CRM 工具推动客户体验优化。中英文双语流利，具有出色的领导力、数据分析与沟通表达能力。</p>
+    <h2><i class='fa-solid fa-circle-user'></i><span id="summary-title"></span></h2>
+    <p id="summary"></p>
     <div class="info-grid">
-      <p><i class="fa-solid fa-cake-candles"></i><strong id="label-birth">出生年月：</strong> <span id="birth">1996年08月</span></p>
-      <p><i class="fa-solid fa-graduation-cap"></i><strong id="label-uni">毕业院校：</strong> <span id="university">贵州大学</span></p>
-      <p><i class="fa-solid fa-language"></i><strong id="label-lang">语言能力：</strong> <span id="language">中文六级，TOEIC 8级</span></p>
-      <p><i class="fa-solid fa-phone"></i><strong id="label-phone">联系方式：</strong> <span id="phone">0865398693</span></p>
+      <p><i class="fa-solid fa-cake-candles"></i><strong id="labelBirth"></strong> <span id="birth">1996年08月</span></p>
+      <p><i class="fa-solid fa-graduation-cap"></i><strong id="labelUni"></strong> <span id="university">贵州大学</span></p>
+      <p><i class="fa-solid fa-language"></i><strong id="labelLang"></strong> <span id="language">中文六级，TOEIC 8级</span></p>
+      <p><i class="fa-solid fa-phone"></i><strong id="labelPhone"></strong> <span id="phone">0865398693</span></p>
     </div>
-    <h2><i class="fa-solid fa-book"></i><span id="edu-title">教育背景</span></h2>
-    <div class="section">
-      <p id="edu">2014年9月 – 2019年6月 · 贵州大学 · 工商管理与旅游管理双专业方向。主修课程包括：人力资源管理、绩效评估、团队领导力、项目管理与风险控制。</p>
-    </div>
-    <h2><i class="fa-solid fa-briefcase"></i><span id="exp-title">工作经历</span></h2>
-    <div class="section" id="exp">
-      <p><strong>2019年6月 – 2021年5月</strong> · BGC科技公司 · 客户体验运营负责人</p>
-      <ul>
-        <li>处理客户咨询与售后问题，维护良好客户关系；</li>
-        <li>管理客服系统数据，协助销售团队提升绩效；</li>
-        <li>负责新员工培训，持续优化服务流程与质量。</li>
-      </ul>
-      <p><strong>2021年7月 – 2024年12月</strong> · DA集团 · 人力资源管理顾问</p>
-      <ul>
-        <li>带领10人以上招聘团队，团队成绩长期保持集团前三；</li>
-        <li>主导招聘流程的制定与优化，提高整体效率与候选人匹配度；</li>
-        <li>参与面试与评估，注重文化契合度；</li>
-        <li>培训与指导新人成长，提升团队整体专业素养。</li>
-      </ul>
-    </div>
-    <h2><i class="fa-solid fa-user-check"></i><span id="eval-title">自我评价</span></h2>
-    <p id="self">熟练使用 ChatGPT 及各类办公软件，具备较强的进取心与创造力。沟通协调能力出色，擅长组织管理，注重执行力与细节，能高效推动团队完成任务。</p>
-    <h2><i class="fa-solid fa-heart"></i> 兴趣与热情</h2>
-    <div class="section">
-      <p>我始终保持对新知与技术的强烈好奇，热衷于在快速变化的科技浪潮中不断提升自己：</p>
-      <ul>
-        <li><strong>技术探索：</strong> 喜欢深入研究系统架构与网络基础，正在备考 CCNA 网络工程师认证。</li>
+
+    <h2><i class="fa-solid fa-book"></i><span id="eduTitle"></span></h2>
+    <p id="edu"></p>
+
+    <h2><i class="fa-solid fa-briefcase"></i><span id="expTitle"></span></h2>
+    <div id="exp"></div>
+
+    <h2><i class="fa-solid fa-user-check"></i><span id="evalTitle"></span></h2>
+    <p id="self"></p>
+
+    <h2><i class="fa-solid fa-heart"></i> <span id="interestTitle"></span></h2>
+    <div id="interest"></div>
+
+    <h2><i class="fa-solid fa-quote-left"></i> <span id="mottoTitle"></span></h2>
+    <p id="motto"></p>
+
+    <h2><i class="fa-solid fa-bullseye"></i> <span id="goalTitle"></span></h2>
+    <p id="goal"></p>
+  </div>
+
+<script>
+const langContent = {
+  zh: {
+    "summary-title": "专业概述",
+    summary: "具备工商与旅游管理双背景的人才管理顾问，擅长优化招聘流程、带领跨部门团队协作，并通过 ChatGPT 和 CRM 工具推动客户体验优化。",
+    labelBirth: "出生年月：",
+    labelUni: "毕业院校：",
+    labelLang: "语言能力：",
+    labelPhone: "联系方式：",
+    eduTitle: "教育背景",
+    edu: "2014年9月 – 2019年6月 · 贵州大学 · 工商管理与旅游管理双专业方向。主修课程包括：人力资源管理、绩效评估、团队领导力、项目管理与风险控制。",
+    expTitle: "工作经历",
+    exp: `<p><strong>2019年6月 – 2021年5月</strong> · BGC科技公司 · 客户体验运营负责人</p>
+          <ul>
+            <li>处理客户咨询与售后问题，维护良好客户关系；</li>
+            <li>管理客服系统数据，协助销售团队提升绩效；</li>
+            <li>负责新员工培训，持续优化服务流程与质量。</li>
+          </ul>
+          <p><strong>2021年7月 – 2024年12月</strong> · DA集团 · 人力资源管理主管</p>
+          <ul>
+            <li>带领10人以上招聘团队，团队成绩长期保持集团前三；</li>
+            <li>主导招聘流程的制定与优化，提高整体效率与候选人匹配度；</li>
+            <li>参与面试与评估，注重文化契合度；</li>
+            <li>培训与指导新人成长，提升团队整体专业素养。</li>
+          </ul>`,
+    evalTitle: "自我评价",
+    self: "熟练使用 ChatGPT 及各类办公软件，具备较强的进取心与创造力。沟通协调能力出色，擅长组织管理，注重执行力与细节，能高效推动团队完成任务。",
+    interestTitle: "兴趣与热情",
+    interest: `<ul>
+        <li><strong>技术探索：</strong> 热衷研究系统架构与网络基础，正在学习 CCNA 与前端开发，深入理解互联网技术原理与实战能力。</li>
         <li><strong>学习成长：</strong> 热爱编程与工具类应用，持续精进解决问题的能力。</li>
         <li><strong>行业关注：</strong> 紧跟 Apple、AI、国产科技等生态动态，善于从中提取趋势洞察。</li>
         <li><strong>身体管理：</strong> 坚持健身训练，相信身体与专注力是专业表现的底层保障。</li>
-      </ul>
-    </div>
-    <h2><i class="fa-solid fa-quote-left"></i> 人生箴言</h2>
-    <p>没有最好的年纪，只有最好的状态。</p>
-    <h2><i class="fa-solid fa-bullseye"></i> 人生目标</h2>
-    <p>雷军 40 岁创办小米，让我深信任何年龄都可以开启新篇章。重新投身 IT 与科技领域，是我给自己的时代回应：不止于转型，更是重构人生价值坐标。</p>
-  </div>
-
-  <script>
-  const langContent = {
-    zh: {
-      summary: "具备工商与旅游管理双背景的人才管理顾问，擅长优化招聘流程、带领跨部门团队协作，并通过 ChatGPT 和 CRM 工具推动客户体验优化。中英文双语流利，具有出色的领导力、数据分析与沟通表达能力。",
-      labelBirth: "出生年月：",
-      labelUni: "毕业院校：",
-      labelLang: "语言能力：",
-      labelPhone: "联系方式：",
-      eduTitle: "教育背景",
-      edu: "2014年9月 – 2019年6月 · 贵州大学 · 工商管理与旅游管理双专业方向。主修课程包括：人力资源管理、绩效评估、团队领导力、项目管理与风险控制。",
-      expTitle: "工作经历",
-      exp: `<p><strong>2019年6月 – 2021年5月</strong> · BGC科技公司 · 客户体验运营负责人</p>
-        <ul>
-          <li>处理客户咨询与售后问题，维护良好客户关系；</li>
-          <li>管理客服系统数据，协助销售团队提升绩效；</li>
-          <li>负责新员工培训，持续优化服务流程与质量。</li>
-        </ul>
-        <p><strong>2021年7月 – 2024年12月</strong> · DA集团 · 人力资源管理顾问</p>
-        <ul>
-          <li>带领10人以上招聘团队，团队成绩长期保持集团前三；</li>
-          <li>主导招聘流程的制定与优化，提高整体效率与候选人匹配度；</li>
-          <li>参与面试与评估，注重文化契合度；</li>
-          <li>培训与指导新人成长，提升团队整体专业素养。</li>
-        </ul>`,
-      evalTitle: "自我评价",
-      self: "熟练使用 ChatGPT 及各类办公软件，具备较强的进取心与创造力。沟通协调能力出色，擅长组织管理，注重执行力与细节，能高效推动团队完成任务。"
-    },
-    en: {
-      summary: "Human capital consultant with dual degrees in Business and Tourism Management. Skilled in streamlining recruitment processes, leading cross-functional collaboration, and driving customer experience enhancement via ChatGPT and CRM platforms. Bilingual in Mandarin and English with strong leadership, analytical, and interpersonal skills.",
-      labelBirth: "Date of Birth:",
-      labelUni: "University:",
-      labelLang: "Languages:",
-      labelPhone: "Phone:",
-      eduTitle: "Education",
-      edu: "Sept 2014 – Jun 2019 · Guizhou University · Dual major in Business and Tourism Management. Core curriculum: HR Management, Performance Evaluation, Team Leadership, Project & Risk Management.",
-      expTitle: "Professional Experience",
-      exp: `<p><strong>Jun 2019 – May 2021</strong> · BGC Technology · Customer Experience Operations Lead</p>
-        <ul>
-          <li>Handled customer inquiries and post-sale issues, ensuring excellent client relationships.</li>
-          <li>Managed service systems, collaborated with sales to boost performance.</li>
-          <li>Led training initiatives and optimized support workflows.</li>
-        </ul>
-        <p><strong>Jul 2021 – Dec 2024</strong> · DA Group · Human Resources Consultant</p>
-        <ul>
-          <li>Led a 10+ member recruitment team, consistently top-ranked in the group.</li>
-          <li>Designed and enhanced hiring processes to increase efficiency and fit.</li>
-          <li>Conducted interviews focusing on culture match and potential.</li>
-          <li>Mentored junior staff and built a high-performing HR team.</li>
-        </ul>`,
-      evalTitle: "Self Evaluation",
-      self: "Proficient in ChatGPT and productivity tools. Highly driven and creative with strong coordination and leadership abilities. Detail-oriented and execution-focused, enabling effective team success."
-    }
-  };
-
-  function setLang(lang) {
-    const t = langContent[lang];
-    document.getElementById("summary").textContent = t.summary;
-    document.getElementById("label-birth").textContent = t.labelBirth;
-    document.getElementById("label-uni").textContent = t.labelUni;
-    document.getElementById("label-lang").textContent = t.labelLang;
-    document.getElementById("label-phone").textContent = t.labelPhone;
-    document.getElementById("edu-title").textContent = t.eduTitle;
-    document.getElementById("edu").textContent = t.edu;
-    document.getElementById("exp-title").textContent = t.expTitle;
-    document.getElementById("exp").innerHTML = t.exp;
-    document.getElementById("eval-title").textContent = t.evalTitle;
-    document.getElementById("self").textContent = t.self;
+      </ul>`,
+    mottoTitle: "人生箴言",
+    motto: "没有最好的年纪，只有最好的状态。",
+    goalTitle: "人生目标",
+    goal: "雷军 40 岁创办小米，让我深信任何年龄都可以开启新篇章。重新投身 IT 与科技领域，是我给自己的时代回应：不止于转型，更是重构人生价值坐标。"
+  },
+  en: {
+    "summary-title": "Professional Summary",
+    summary: "Human capital consultant with dual degrees in Business and Tourism Management. Skilled in streamlining recruitment processes and improving customer experience using ChatGPT and CRM systems.",
+    labelBirth: "Date of Birth:",
+    labelUni: "University:",
+    labelLang: "Languages:",
+    labelPhone: "Phone:",
+    eduTitle: "Education",
+    edu: "Sept 2014 – Jun 2019 · Guizhou University · Dual major in Business Administration and Tourism Management. Main courses: HR Management, Performance Evaluation, Team Leadership, Project and Risk Management.",
+    expTitle: "Work Experience",
+    exp: `<p><strong>Jun 2019 – May 2021</strong> · BGC Technology · Customer Experience Operations Lead</p>
+          <ul>
+            <li>Handled customer inquiries and post-sale issues, maintaining strong client relationships;</li>
+            <li>Managed customer service data and assisted the sales team in improving performance;</li>
+            <li>Trained new employees and continuously optimized service workflows.</li>
+          </ul>
+          <p><strong>Jul 2021 – Dec 2024</strong> · DA Group · Human Resource Management Supervisor</p>
+          <ul>
+            <li>Led a recruitment team of 10+, consistently ranked top 3 in the group;</li>
+            <li>Designed and optimized recruitment processes to improve efficiency and candidate matching;</li>
+            <li>Conducted interviews and assessments with focus on cultural fit;</li>
+            <li>Trained and mentored newcomers, improving overall team professionalism.</li>
+          </ul>`,
+    evalTitle: "Self Evaluation",
+    self: "Proficient in ChatGPT and various office software, highly proactive and creative. Excellent in communication and organization, detail-oriented with strong execution capabilities.",
+    interestTitle: "Interests & Passion",
+    interest: `<ul>
+        <li><strong>Tech Exploration:</strong> Passionate about system architecture and network fundamentals; currently studying CCNA and front-end development to gain both theoretical and practical internet technology skills.</li>
+        <li><strong>Continuous Learning:</strong> Loves programming and productivity tools, constantly refining problem-solving skills.</li>
+        <li><strong>Industry Insight:</strong> Follows trends in Apple, AI, and domestic tech ecosystems to extract meaningful insights.</li>
+        <li><strong>Fitness & Discipline:</strong> Regular gym-goer, believing physical health is foundational to focus and performance.</li>
+      </ul>`,
+    mottoTitle: "Life Motto",
+    motto: "There is no best age, only the best state.",
+    goalTitle: "Life Goal",
+    goal: "Inspired by Lei Jun founding Xiaomi at 40, I believe it's never too late to start over. Returning to the IT field is my way of redefining personal value and purpose."
+  },
+  vi: {
+    "summary-title": "Tóm tắt chuyên môn",
+    summary: " Thành thạo tối ưu hóa quy trình tuyển dụng, lãnh đạo hợp tác liên phòng ban và nâng cao trải nghiệm khách hàng bằng công cụ ChatGPT và hệ thống CRM.",
+    labelBirth: "Ngày sinh:",
+    labelUni: "Trường đại học:",
+    labelLang: "Ngôn ngữ:",
+    labelPhone: "Số điện thoại:",
+    eduTitle: "Học vấn",
+    edu: "09/2014 – 06/2019 · Đại học Quý Châu · Song ngành Quản trị Kinh doanh và Quản trị Du lịch. Các môn học chính: Quản lý nhân sự, Đánh giá hiệu suất, Lãnh đạo nhóm, Quản lý dự án và Kiểm soát rủi ro.",
+    expTitle: "Kinh nghiệm làm việc",
+    exp: `<p><strong>06/2019 – 05/2021</strong> · Công ty Công nghệ BGC · Trưởng nhóm Vận hành Trải nghiệm Khách hàng</p>
+          <ul>
+            <li>Xử lý các yêu cầu và phản hồi sau bán hàng, duy trì mối quan hệ khách hàng tốt;</li>
+            <li>Quản lý dữ liệu hệ thống CSKH, hỗ trợ nhóm bán hàng nâng cao hiệu suất;</li>
+            <li>Đào tạo nhân viên mới và liên tục cải tiến quy trình dịch vụ.</li>
+          </ul>
+          <p><strong>07/2021 – 12/2024</strong> · Tập đoàn DA · Trưởng phòng Quản lý Nhân sự</p>
+          <ul>
+            <li>Lãnh đạo đội ngũ tuyển dụng hơn 10 người, luôn nằm trong top 3 toàn tập đoàn;</li>
+            <li>Xây dựng và tối ưu hóa quy trình tuyển dụng, nâng cao hiệu quả và độ phù hợp của ứng viên;</li>
+            <li>Tham gia phỏng vấn và đánh giá, chú trọng sự phù hợp về văn hóa;</li>
+            <li>Đào tạo và hướng dẫn nhân viên mới, nâng cao năng lực chuyên môn cho cả nhóm.</li>
+          </ul>`,
+    evalTitle: "Tự đánh giá",
+    self: "Thành thạo ChatGPT và các phần mềm văn phòng, có tinh thần cầu tiến và sáng tạo cao. Kỹ năng giao tiếp và tổ chức tốt, chú trọng chi tiết và khả năng thực thi mạnh mẽ.",
+    interestTitle: "Sở thích & Đam mê",
+    interest: `<ul>
+        <li><strong>Khám phá công nghệ:</strong> Đam mê nghiên cứu kiến trúc hệ thống và nền tảng mạng, đang học CCNA và phát triển front-end để hiểu sâu và thực hành vững vàng.</li>
+        <li><strong>Học tập không ngừng:</strong> Yêu thích lập trình và công cụ năng suất, luôn rèn luyện khả năng giải quyết vấn đề.</li>
+        <li><strong>Quan tâm ngành nghề:</strong> Luôn theo dõi xu hướng công nghệ của Apple, AI và các hệ sinh thái nội địa để nắm bắt xu hướng.</li>
+        <li><strong>Quản lý sức khỏe:</strong> Duy trì luyện tập thể hình đều đặn, tin rằng sức khỏe là nền tảng cho sự tập trung và hiệu suất chuyên môn.</li>
+      </ul>`,
+    mottoTitle: "Châm ngôn sống",
+    motto: "Không có độ tuổi tốt nhất, chỉ có trạng thái tốt nhất.",
+    goalTitle: "Mục tiêu cuộc sống",
+    goal: "Lấy cảm hứng từ việc Lôi Quân thành lập Xiaomi ở tuổi 40, tôi tin rằng không bao giờ là quá muộn để bắt đầu lại. Việc trở lại lĩnh vực CNTT là cách tôi tái định nghĩa giá trị và sứ mệnh cá nhân."
   }
+};
+
+function setLang(lang) {
+  const content = langContent[lang];
+  Object.keys(content).forEach(key => {
+    const el = document.getElementById(key);
+    if (el) el.innerHTML = content[key];
+  });
+}
+setLang('zh');
 </script>
 </body>
 </html>
